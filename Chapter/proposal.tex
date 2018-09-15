@@ -1,0 +1,25 @@
+\chapter{Proposed Work}\label{cap:proposal}
+\thispagestyle{empty}
+
+	Outline:
+	\begin{itemize}
+	  \item \textbf{Assumptions? Simplifications?}
+
+	\end{itemize} 
+
+	\textbf{Data to be used.} We can use data sources as PeeringDB, PCH, DataCenterMap, Inflect Data Center and Peering Mapping (https://inflect.com), IXP, ASes, and Network Operating Centers (NOCs) websites and lists provided in regional consortia of IXPs, as well as active measurements using the IXP as a vantage point to build an initial mapping between AS, IXP, and facilities. 
+
+	We can use other external vantage points as RIPE Atlas, Looking Glass (Periscope \cite{Periscope}), iPlane and CAIDA Ark to augment our initial mapping or to validate the mapping obtained from the IXP point of view.
+
+	We can use datasets of BGP to verify the BGP Communities attribute
+	for acquiring accurate location information for about half of all BGP IPv4 updates as \cite{Giotsas:2017:DPI:3098822.3098855}. We can use flow sample datasets from IX.br to investigate how many IXPs a given flow is traversing, infer and "see" from where traffic arrives,  leaves,  where it comes from...
+
+	%\textbf{Assumptions.} 
+
+	\textbf{Data processing and implementation} Assuming that we will be dealing with a significant amount of data, the processing in the IXP would generate a considerable overhead and it may not have the necessary resources. The ideal would be to process all data in a cloud (e.g., Azure).
+
+	\textbf{Risks and limitations.} IXPs could show as a bad vantage point to improve interconnection mapping. Using few numbers of IXPs as VPs could provide inaccurate results given that their visibility, individually, may not perfect. The privileged data that we expect to use to improve/validate our methodology could not be useful. IXPs could not see a clear advantage of being used as VPs, even though they could use this "role" to obtain better information about their networks, validation of colocs connections, search for new colocs to connect, improve infrastructure planning.
+
+	\textbf{Set of metrics.} Number of peering interfaces inferred. Fraction of resolved interfaces when dealing with less vantage points used. Fraction of unresolved interfaces with when removing facilities information. Fraction of ground truth locations that match inferred locations. Number of peering interfaces inferred by one IXP. Error probability of inferred location.
+
+	\textbf{Validation.} We can validate our results both getting direct feedback from ASes, IXPs and network operators as using other information sources as BGP communities.

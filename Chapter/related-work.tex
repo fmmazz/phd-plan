@@ -1,0 +1,31 @@
+\chapter{Related Work}\label{cap:related-work}
+\thispagestyle{empty}
+
+	Body of related work separeted in categories:
+
+	\section{Peering infrastructures and operation}
+	\label{sec:rel-work-peering-infra}
+
+	\cite{Ager:2012, Chatzis:2013, Richter:2014, Kotronis:2017:STC:3131365.3131388, Chatzis:2013:BUL:2504730.2504746, DissectingBrazilianIXP, Augustin:2009:IM:1644893.1644934}
+
+	\section{Relationship between ASes}
+	\label{sec:rel-work-relat-as}
+
+	\cite{Giotsas:2014:ICR:2663716.2663743, Giotsas:2015:MPI:2716281.2836122, Luckie:2013:RCC:2504730.2504735}
+
+	\section{Mapping of peering infrastructures}
+	\label{sec:rel-work-mapping-peer}
+
+	\cite{Marder:2016:MMA:2987443.2987468, nomikos2016traixroute}
+
+	\section{Mapping interconnections to facilities}
+	\label{sec:rel-work-mapping-facility}
+
+	\cite{Giotsas:2015:MPI:2716281.2836122} propose an algorithm to infer the physical interconnection facility where an interconnection occurs among all possible candidates. Uses data from PeeringDB, PCH, IXP, ASes and Network Operating Centers (NOCs) sites and lists provided in regional consortia of IXPs to build an initial mapping between AS, IXP, and facilities.
+	Measurements from RIPE Atlas, Looking Glass, iPlane and CAIDA Ark.
+	
+	Methodology provides accurate results for the interfaces that resolve to a facility in a low number of iterations. Key insight is that the type of peering for an interconnection sufficiently constrains the number of candidate facilities to identify the specific facility where a given interconnection occurs.
+	
+	Unable to scale to large scenarios involving several colocation facilities, IXPs, and ASes, given a large amount of active probing campaigns needed. Initial process of mapping networks and IXPs to facilities, required by the methodology, is extremely manual and time-consuming to be developed/updated. Methodology is very sensitive to missing or incorrect information and could yield inaccurate results. 
+
+	The work of \cite{Giotsas:2017:DPI:3098822.3098855} combines location-tagging BGP Communities with a colocation map to infer the location of outages. Map is done similarly as in \cite{Giotsas:2015:MPI:2716281.2836122}. BGP communities have no standardized semantics and are only employed by half of the BGP paths announced on the Internet, which could lead to an incorrect and incomplete view of the infrastructure.
