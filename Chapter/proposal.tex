@@ -1,18 +1,13 @@
 \chapter{Proposed Work}\label{cap:proposal}
 \thispagestyle{empty}
 
-	Outline:
-	\begin{itemize}
-	  \item \textbf{Assumptions? Simplifications?}
+	Investigate if leveraging IXPs as scalable vantage points, performing measure- ments campaigns from IXP to the outside Internet, and using available privileged data (i.e., flows samples and BGP information) can improve the interconnection mapping to facilities and create a broader, more accurate and scalable methodology which would be used to enhance network infrastructure and safety. Investigate if using IXPs as vantage points could improve the initial IXP/AS to facility mapping through measurements in- stead of relying on online resources (PeeringDB, IXPs/ASes websites).
 
-	\end{itemize} 
+	\textbf{Data to be used.} We can use data sources as PeeringDB, PCH, DataCenterMap, Inflect Data Center and Peering Mapping (https://inflect.com), IXP, ASes, and Network Operating Centers (NOCs) websites and lists provided in regional consortia of IXPs, as well as active measurements using the IXP as a vantage point to build a mapping between AS, IXP, and facilities. 
 
-	\textbf{Data to be used.} We can use data sources as PeeringDB, PCH, DataCenterMap, Inflect Data Center and Peering Mapping (https://inflect.com), IXP, ASes, and Network Operating Centers (NOCs) websites and lists provided in regional consortia of IXPs, as well as active measurements using the IXP as a vantage point to build an initial mapping between AS, IXP, and facilities. 
+	We can use other vantage points as RIPE Atlas, Looking Glass (Periscope \cite{Periscope}), iPlane and CAIDA Ark to augment our mapping or to validate the mapping obtained from the IXP point of view.
 
-	We can use other external vantage points as RIPE Atlas, Looking Glass (Periscope \cite{Periscope}), iPlane and CAIDA Ark to augment our initial mapping or to validate the mapping obtained from the IXP point of view.
-
-	We can use datasets of BGP to verify the BGP Communities attribute
-	for acquiring accurate location information for about half of all BGP IPv4 updates as \cite{Giotsas:2017:DPI:3098822.3098855}. We can use flow sample datasets from IX.br to investigate how many IXPs a given flow is traversing, infer and "see" from where traffic arrives,  leaves,  where it comes from...
+	We can use datasets of BGP to leverage the BGP Communities attribute and acquire accurate location information for about half of all BGP IPv4 updates as \cite{Giotsas:2017:DPI:3098822.3098855}. We can use flow sample datasets from IX.br to investigate how many IXPs a given flow is traversing, infer and "see" from where traffic arrives, leaves, where it comes from. Also to obtain the ground truth of this IXP’s public peering fabric, map MAC addresses to router IP addresses and their respective AS numbers~\cite{Ager:2012} and information about how two parties of an IXP peering use that link and for what purpose~\cite{Richter:2014}.
 
 	%\textbf{Assumptions.} 
 
@@ -20,6 +15,6 @@
 
 	\textbf{Risks and limitations.} IXPs could show as a bad vantage point to improve interconnection mapping. Using few numbers of IXPs as VPs could provide inaccurate results given that their visibility, individually, may not perfect. The privileged data that we expect to use to improve/validate our methodology could not be useful. IXPs could not see a clear advantage of being used as VPs, even though they could use this "role" to obtain better information about their networks, validation of colocs connections, search for new colocs to connect, improve infrastructure planning.
 
-	\textbf{Set of metrics.} Number of peering interfaces inferred. Fraction of resolved interfaces when dealing with less vantage points used. Fraction of unresolved interfaces with when removing facilities information. Fraction of ground truth locations that match inferred locations. Number of peering interfaces inferred by one IXP. Error probability of inferred location.
+	\textbf{Set of metrics.} Number of peering interfaces inferred. Fraction of resolved interfaces when dealing with less vantage points used. Fraction of unresolved interfaces with when removing facilities information. Fraction of ground truth locations that match inferred locations. \cite{Giotsas:2015:MPI:2716281.2836122}. Number of peering interfaces inferred by one IXP. Error probability of inferred location.
 
 	\textbf{Validation.} We can validate our results both getting direct feedback from ASes, IXPs and network operators as using other information sources as BGP communities.
