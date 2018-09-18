@@ -5,15 +5,12 @@
 
 	Brazil peering infrastructure maintains the largest set of public IXPs in a single country and is among the world’s top ten IXPs in terms of traffic.~\cite{DissectingBrazilianIXP}. Currently, there are 31 public IXPs deployed in all regions~\cite{IXbr}. Access to privileged data (i.e., flows samples and BGP information) of the major IXPs of the IX.br Project (e.g., IX-SP and IX-RS) leaves large room to explore measurement studies. 
 
+	\textbf{Motivation.} Recent methodologies \cite{Giotsas:2015:MPI:2716281.2836122} provideaccurate results but can not scale to large scenarios with several coloc, IXPs and ASes, given the large amount of active probing campaigns needed. The initial process of mapping networks, and IXPs to facilities is manual and time-consuming to be developed/updated. The work of \cite{Giotsas:2017:DPI:3098822.3098855} combines BGP communities with a colocation map to infer the location of outages. However, the map is done similarly as in \cite{Giotsas:2015:MPI:2716281.2836122}. Besides, BGP communities have no standardized semantics and are only employed by half of the BGP paths announced on the Internet.
+
+	Expand existing results would provide a more scalable and more accurate interconnection mapping which would help to pinpoint outages and attacks, troubleshoot network problems, track traffic flows and improve the resilience of interconnections more precisely.
+
 	Investigate if leveraging IXPs as scalable vantage points, performing measurements campaigns from IXP to the outside Internet, and using available privileged data (i.e., flows samples and BGP information) can improve the interconnection mapping to facilities and create a broader, more accurate and scalable methodology which would be used to enhance network infrastructure and safety. 
-	Investigate if using IXPs as vantage points could improve the initial IXP/AS to facility mapping through measurements instead of relying on online resources (PeeringDB, IXPs/ASes websites).	Looking Glass has some servers colocated with IXPs that can be used as vantage points. However, they are not scalable since they are not appropriate for scanning a large range of addresses due to probing limitations~\cite{Giotsas:2015:MPI:2716281.2836122}.
-
-
-
-	\textbf{Motivation.} Expand existing results would provide a more scalable and more accurate interconnection mapping which would help to pinpoint outages and attacks, troubleshoot network problems, track traffic flows and improve the resilience of interconnections more precisely.
-	%TODO colocar algumas referencias para trabalhos sobre isso
-
-	Recent methodologies \cite{Giotsas:2015:MPI:2716281.2836122} provide accurate results but can not scale to large scenarios with several coloc, IXPs and ASes, given the large amount of active probing campaigns needed. The initial process of mapping networks, and IXPs to facilities is manual and time-consuming to be developed/updated. The work of \cite{Giotsas:2017:DPI:3098822.3098855} combines BGP communities with a colocation map to infer the location of outages. However, the map is done similarly as in \cite{Giotsas:2015:MPI:2716281.2836122}. Besides, BGP communities have no standardized semantics and are only employed by half of the BGP paths announced on the Internet.
+	Looking Glass has some servers colocated with IXPs that can be used as vantage points. However, they are not scalable since they are not appropriate for scanning a large range of addresses due to probing limitations~\cite{Giotsas:2015:MPI:2716281.2836122}.
 
 
 	\textbf{Expected contributions.} We expect that leveraging IXPs as scalable vantage points, given their global role seeing traffic from a large fraction of the Internet~\cite{Chatzis:2013:BUL:2504730.2504746}, and using available privileged data (i.e., flows samples and BGP information) will enable higher visibility and knowledge about the geolocalization of peering interconnections, and will allow creating a broader and more accurate interconnection mapping to facilities. 
