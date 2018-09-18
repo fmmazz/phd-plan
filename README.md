@@ -30,7 +30,11 @@ Checkout the branch for the current section:
 
 `git checkout edit-sectionX`
 
-After editing, commit the files:
+After editing, add all files:
+
+`git add --all .`
+
+Commit the files:
 
 `git commit -a -m "Your message"`
 
