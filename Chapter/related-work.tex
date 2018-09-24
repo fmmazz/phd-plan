@@ -13,13 +13,10 @@
 
 	\cite{Giotsas:2014:ICR:2663716.2663743, Giotsas:2015:MPI:2716281.2836122, Luckie:2013:RCC:2504730.2504735}
 
-	\section{Mapping of peering infrastructures}
+	\section{Mapping of peering interconnections and infrastructures}
 	\label{sec:rel-work-mapping-peer}
 
 	\cite{Augustin:2009:IM:1644893.1644934, nomikos2016traixroute}
-
-	\section{Mapping interconnections to facilities}
-	\label{sec:rel-work-mapping-facility}
 
 	\cite{Giotsas:2015:MPI:2716281.2836122} propose an algorithm to infer the physical interconnection facility where an interconnection occurs among all possible candidates. Uses data from PeeringDB, PCH, IXP, ASes and Network Operating Centers (NOCs) sites and lists provided in regional consortia of IXPs to build an initial mapping between AS, IXP, and facilities.
 	Measurements from RIPE Atlas, Looking Glass, iPlane and CAIDA Ark.
@@ -28,4 +25,9 @@
 	
 	Unable to scale to large scenarios involving several colocation facilities, IXPs, and ASes, given a large amount of active probing campaigns needed. Initial process of mapping networks and IXPs to facilities, required by the methodology, is extremely manual and time-consuming to be developed/updated. Methodology is very sensitive to missing or incorrect information and could yield inaccurate results. 
 
-	The work of \cite{Giotsas:2017:DPI:3098822.3098855} combines location-tagging BGP Communities with a colocation map to infer the location of outages. Map is done similarly as in \cite{Giotsas:2015:MPI:2716281.2836122}. BGP communities have no standardized semantics and are only employed by half of the BGP paths announced on the Internet, which could lead to an incorrect and incomplete view of the infrastructure.
+	\section{Mapping of topology elements}
+	\label{sec:rel-work-mapping-topo-elem}
+
+	\cite{Gharaibeh:2017:LRG:3131365.3131380, Huffaker:2014:DDR:2656877.2656879, 8002903}
+
+	%The work of \cite{Giotsas:2017:DPI:3098822.3098855} combines location-tagging BGP Communities with a colocation map to infer the location of outages. Map is done similarly as in \cite{Giotsas:2015:MPI:2716281.2836122}. BGP communities have no standardized semantics and are only employed by half of the BGP paths announced on the Internet, which could lead to an incorrect and incomplete view of the infrastructure.
