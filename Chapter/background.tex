@@ -1,18 +1,31 @@
 \chapter{Backgroud}\label{cap:background}
 \thispagestyle{empty}
 
+	In this chapter, we present some background related to the area of the proposed plan. In Section~\ref{sec:peering-infra}, we describe the concepts of Peering Infrastructures, defining Internet Exchange Points (Subsection~\ref{subsec:ixp}) and Colocation Facilities (Subsection~\ref{subsec:colos}).
+
+	%\section{Peering}
+	%\label{sec:peering}
+
 	\section{Peering Infrastructures}
 	\label{sec:peering-infra}
 
-	\subsection{Internet Exchange Points}
-	\label{sec:ixp}
+	Peering infrastructures are comprised of both Internet exchange points (IXP) and colocation facilities. They are responsible for exchanging a growing volume of traffic between different networks, support thousands of network members, and are widely available all over the world.
 
-	\cite{Chatzis:2013, Chatzis:2015:QVO:2717646.2717650, IXPInternetSociety}
+	\subsection{Internet Exchange Points}
+	\label{subsec:ixp}
+
+	Internet Exchange Points are physical network infrastructures where a set of autonomous systems can interconnect their networks to exchange traffic. These infrastructures provide a shared switching fabric to support the traffic resulting from public and private peering of its network affiliates and are responsible for interconnecting almost half of the Internet~\cite{Ager:2012, Chatzis:2013:BUL:2504730.2504746, Richter:2014}.
+
+	Historically, they can be considered as the successors of Network Access Points (NAPs), which were responsible for the smooth transition from the monolithic government network to the modern Internet~\cite{Chatzis:2013}. Since 1995, the four existing NAPs have been replaced by more than 800 IXPs in 200+ cities around the world, interconnecting 50k+ networks~\cite{Ager:2012, Giotsas:2015:MPI:2716281.2836122}. As these infrastructures are mainly located in every major metropolitan area, they associate with Colocation Facilities to reach city-level interconnection with other networks~\cite{Giotsas:2015:MPI:2716281.2836122}.
+
+	%\cite{Chatzis:2013, Chatzis:2015:QVO:2717646.2717650, IXPInternetSociety}
 
 	\subsection{Colocations Facilities}
-	\label{sec:colos}
+	\label{subsec:colos}
 
-	\cite{Giotsas:2015:MPI:2716281.2836122, Kotronis:2017:STC:3131365.3131388}
+	Colocation facilities (Colos) are physical locations that provide essential infrastructures like power, space, cooling, physical security, storage, and networking equipment to their associated companies. Their platform connects the member's network to various IXPs, transit networks, cloud/content providers and other ASes in multiple locations worldwide. These provided amenities lower the infrastructure costs and drive small and medium providers to house their equipment (storage, server, routers) in the Colos. Large carrier-neutral companies such as Equinix and Telehouse are the leading operators of colocation facilities all over the world~\cite{Giotsas:2015:MPI:2716281.2836122, Kotronis:2017:STC:3131365.3131388}.
+
+	
 
 
 	
