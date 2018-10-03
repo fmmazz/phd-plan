@@ -1,7 +1,7 @@
 \chapter{Methodology}\label{cap:methodology}
 \thispagestyle{empty}
 
-In this chapter, we present the methodology, schedule, and collaboration of the proposed work. First, we outline the main steps needed to develop the research described in this plan (Section~\ref{sec:steps}). Next, in Section~\ref{sec:schedule}, we detail a proposed schedule for the entire Ph.D. period, composed of actions and their expected duration. Finally, we conclude describing the intended collaboration with one of the leading research groups in the topic of the Ph.D. plan (Section~\ref{sec:collaboration}). 
+We now present the methodology, schedule, and collaboration of the proposed work. First, we outline the main steps needed to develop the research described in this plan (Section~\ref{sec:steps}). Next, in Section~\ref{sec:schedule}, we detail a proposed schedule for the entire Ph.D. period, composed of actions and their expected duration. Finally, we conclude describing the intended collaboration with one of the leading research groups in the topic of the Ph.D. plan (Section~\ref{sec:collaboration}). 
 
 \section{Steps}
 \label{sec:steps}
@@ -11,9 +11,9 @@ In this chapter, we present the methodology, schedule, and collaboration of the 
 
 \item {\bf Methodology modeling}: in this step, we will develop a systematic methodology using IXPs as vantage points to map and produce geolocation inferences, seeking to answer the proposed research questions. Also at this stage, we will analyze the potential data to be used and design the data collection campaigns and data preparation.
 
-\item {\bf Data collection}: in this phase, we will perform the data collection designed in the previous step. At this stage, we will execute active measurements campaigns and collect data already available from different sources. We will employ targeted traceroutes performed by IXPs as anchors at scale and correlate with BGP information. In order to improve our measurements, we will also leverage other vantage points as RIPE Atlas~\cite{ripeatlas}, Looking Glass (Periscope \cite{Periscope}) and CAIDA Ark~\cite{ark}. To obtain information about peering infrastructures, we will use datasets as PeeringDB~\cite{peeringDB}, PCH~\cite{pch}, Inflect~\cite{inflect}, IXP, ASes, and Network Operating Centers (NOCs) websites and lists provided in regional consortia of IXPs.
+\item {\bf Data collection}: in this phase, we will perform the data collection. At this stage, we will execute active measurements campaigns and collect data already available from different sources. More specifically, we will perform active measurements campaigns from inside of the IXP to obtain a preliminary geolocation knowledge about the Internet topology. Next, we will gather already collected information on control and data planes (e.g., BGP) and correlate with the active measurement data previously obtained to increase the accuracy of the generated inferences.
 
-\item {\bf Data preparation}: in this point, the collected data will be preprocessed and prepared, including the combination of data from different sources, to serve as input for the proposed methodology. The collection of control plane information (BGP) and measurements campaigns tends to generate a significant amount of data. In order to process all data efficiently and without imposing resource and performance overheads to the IXP, we plan to use cloud environments (e.g., Azure) capable of dealing with a massive volume of data.
+\item {\bf Data preparation}: in this point, the collected data will be preprocessed and prepared, including the combination of data from different sources, to serve as input for the proposed methodology. The collection of control plane information (e.g., BGP) and measurements campaigns tends to generate a significant amount of data. In order to process all data efficiently and without imposing resource and performance overheads to the IXP, we plan to use cloud environments (e.g., Azure) capable of dealing with a massive volume of data.
 
 \item {\bf Methodology evaluation}: in this step, we will use de collected and preprocessed data to evaluate and validate the effectiveness of the developed methodology, identifying its features and limitations.
 
@@ -29,7 +29,6 @@ In this chapter, we present the methodology, schedule, and collaboration of the 
 
 \end{enumerate}
 
-\newpage
 \section{Proposed schedule}
 \label{sec:schedule}
 
