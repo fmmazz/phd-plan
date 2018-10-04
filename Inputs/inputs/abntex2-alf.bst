@@ -1,5 +1,5 @@
-%% abntex2-alf.bst, v-1.9.1 laurocesar
-%% Copyright 2012-2013 by abnTeX2 group at http://abntex2.googlecode.com/ 
+%% abntex2-alf.bst, v<VERSION> laurocesar
+%% Copyright 2012-<COPYRIGHT_YEAR> by abnTeX2 group at http://www.abntex.net.br/ 
 %%
 %% This work may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.3
@@ -13,7 +13,7 @@
 %% 
 %% The Current Maintainer of this work is the abnTeX2 team, led
 %% by Lauro César Araujo. Further information are available on 
-%% http://abntex2.googlecode.com/
+%% http://www.abntex.net.br/
 %%
 %% Creator and original mantainer: Gerald Weber <gweber@codigolivre.org.br>
 %% Copyright 2001-2002 by the abnTeX group at http://abntex.codigolivre.org.br
@@ -22,79 +22,7 @@
 %% The original source files were:
 %% merlin.mbs  (with options: `babel,nm-revf,aunm-semi,nmlm,x3,m3,dt-end,yr-com,xmth,vnum-x,volp-com,jwdpg,jwdvol,num-xser,btit-rm,bt-rm,pg-bk,add-pub,pub-date,pub-xpar,pre-pub,isbn,issn,pp,ed,abr,ednx,nfss')
 %% These sourefiles are copyrighted by Patrick W Daly
-%%
-%% Revision history:
-%%
-%% 2013/08/27 PauloQuinan 
-%%  Corrige a formatação de url com https
-%%  Corrige caracter & não escapado em urls de referências quando se usa hyperref
-%%
-%% 2013/06/01 laurocesar
-%%  Ajusta opção iso-690-1987 para @article
-%%
-%% 2013/05/26 laurocesar 
-%%  Corrige problemas de duplicação de ano nas funções article e jornalpart
-%%
-%% 2013/02/28 caduarte7@gmail.com 
-%%  Complete Fix iso-690-1987 option: year was placed for 
-%%  twicebooklet, journalpart, manual, misc, unpublished, patent and unpublished
-%%
-%% 2013/02/21 21h52 caduarte7@gmail.com (revision by laurocesar)
-%%  Fix iso-690-1987 option: year was placed twice
-%%
-%% 2012/12/12 21h48 laurocesar
-%% Fork of the version v 1.45.2.1 2004/11/02 15:17:44 created by gweber
-%% Change file name to from abnt-alf.bst to abntex2-alf.bst
-%% Removed CVS revision automation
-%% Modify referentes of abnt-alf.bst and abnt-num.bst 
-%%
-%% The original revision history is the following:
-%%
-%% Nota sobre os Logs: Se aparecer abnt-num é por que as aletarções foram feitas
-%% neste arquivo e depois copiadas para abnt.alf e vice-versa.
-%%
-%% $Log: abnt-alf.bst,v $
-%% Revision 1.45.2.1  2004/11/02 15:17:44  gweber
-%% correcao do bug 239
-%%
-%% Revision 1.45  2003/07/23 12:06:01  gweber
-%% O comando apply.title.command agora atua sobre todas as ocorrências de title, mas
-%% não sobre campos title que estão vazios.
-%%
-%% Revision 1.44  2003/07/22 16:26:01  gweber
-%% Adicionada a opção abnt-title-command. Com esta opção pode-se definir o comando
-%% \bibtextitlecommand que permite formatações especiais no titulo.
-%%
-%% Revision 1.43  2003/06/05 14:34:05  gweber
-%% Introduzido filtro.url.tex e filtro.url.html, a função do primeiro é alterar uma url de tal maneira
-%% que que o TeX possa processá-la sem problemas. A do segundo é fazer a mesma coisa
-%% para a url que é passada para html ou hyperref.
-%%
-%% Revision 1.42  2003/06/04 13:18:07  gweber
-%% Introduzidas as opções hyperref para abnt.url.package com isso os campos url são formatados agora como hyperlinks ativos.
-%% Também foram acrescentadas a opção abnt.doi que permite selecionar o tratamento que recebe uma url começada com doi:
-%%
-%% Revision 1.41  2003/04/08 00:39:39  gweber
-%% Implementada a entrada @hidden que gera um \hiddenbibitem (só alf),
-%% ou seja uma entrada que não aparece na lista de referências e que pode ser
-%% usada com o comando \apud e \apudonline.
-%%
-%% Revision 1.40  2003/04/01 19:34:47  gweber
-%% consertado bug de ordenação alfabética, agora a ordenação em sort.format.names é igual a de format.names
-%%
-%% Revision 1.39  2003/03/25 14:06:19  gweber
-%% Inicio da adaptação para ISO 690:1987.
-%% Acrescentada a opção iso-author-punctuation cuja opção
-%% void gera iniciais juntas e sem ponto.
-%%
-%% Revision 1.38  2003/03/22 22:59:13  gweber
-%% abnt-nbr10520 foi substituído por abnt-cite-style.
-%% A função recompose.name recompõe um nome complicado, mas a função
-%% ainda é experimental e não está sendo usada no momento. Mesmo
-%% porque há nomes que o próprio bibtex tem problemas para tratar.
-%% A função presort for modificada de modo a poder manter o SORT em
-%% abnt-num sem realmente ordenar alfabeticamente.
-%%
+
 ENTRY
   { address author
     booktitle booksubtitle
@@ -314,13 +242,13 @@ FUNCTION {no.space} { { "" } swap$ }
 FUNCTION {space.word} { " " swap$ * " " * }
 
 FUNCTION {bbl.and}
-{ abnt.and.type #0 = {" and "} 'skip$ if$
+{ abnt.and.type #0 = {" e "} 'skip$ if$
   abnt.and.type #1 = {" \& "} 'skip$ if$}
-FUNCTION {bbl.chapter} { "chp." }
+FUNCTION {bbl.chapter} { "cap." }
 FUNCTION {bbl.colon} {": "}
 FUNCTION {bbl.editors} { "Ed." }
 FUNCTION {bbl.editor} { "Ed." }
-FUNCTION {bbl.edby} { "edited by" }
+FUNCTION {bbl.edby} { "editado por" }
 FUNCTION {bbl.edition} { "ed." }
 FUNCTION {bbl.empty} {""}
 FUNCTION {bbl.etal}{abnt.etal.text "" = {""} {" " abnt.etal.text *} if$}
@@ -333,22 +261,22 @@ FUNCTION {bbl.ldots} %#0 use nothing, #1 use \ldots, #2 use $\ldots$, 3# use {..
    abnt.ldots.type #3 = {"{...}"}    'skip$ if$}
   {""} %for #0 use nothing
 if$}
-FUNCTION {bbl.master}  { "Master" }
+FUNCTION {bbl.master}  { "Mestrado" }
 FUNCTION {bbl.missing.year}
 {abnt.missing.year
   {"[s.d.]"} %#1
   {""}       %#0
  if$}
 FUNCTION {bbl.monography} { "Monografia" }
-FUNCTION {bbl.mthesis} { "Dissertation" }
-FUNCTION {bbl.no.address} {"[S.l.]"} %Sine loco
-FUNCTION {bbl.no.address.no.publisher} {"[S.l.: s.n.]"} 
-FUNCTION {bbl.no.publisher} {"[s.n.]"} %sine nomine
+FUNCTION {bbl.mthesis} { "Disserta\c{c}\~{a}o" }
+FUNCTION {bbl.no.address} {"[S.l.]"}
+FUNCTION {bbl.no.address.no.publisher} {"[S.l.: s.n.]"}
+FUNCTION {bbl.no.publisher} {"[s.n.]"}
 FUNCTION {bbl.number} { iso.abbreviation {"no."} {"n."} if$ }
 FUNCTION {bbl.nr} { "n." }
-FUNCTION {bbl.of} { "of" }
-FUNCTION {bbl.phd} { "PhD" }
-FUNCTION {bbl.phdthesis} { "Thesis" }
+FUNCTION {bbl.of} { "de" }
+FUNCTION {bbl.phd} { "Doutorado" }
+FUNCTION {bbl.phdthesis} { "Tese" }
 FUNCTION {bbl.pages}
   {pagename empty$
     { "p." }
@@ -356,30 +284,30 @@ FUNCTION {bbl.pages}
    if$
    }
 FUNCTION {bbl.page} { bbl.pages }
-FUNCTION {bbl.reprint} {"Reprint of"}
+FUNCTION {bbl.reprint} {"Separata de"}
 FUNCTION {bbl.semicolon} { "; "}
 FUNCTION {bbl.same.field} {"\underline{\ \ \ \ \ \ \ \ }"}
-FUNCTION {bbl.techrep} { "Tech. Rep." }
+FUNCTION {bbl.techrep} { "Rel. Tec." }
 FUNCTION {bbl.url.accessdate}
-  {iso.abbreviation { "Cited "} {"Accessed in: "} if$}
+  {iso.abbreviation { "Cited "} {"Acesso em: "} if$}
 FUNCTION {bbl.url.available}
-{ iso.abbreviation {"Available from Internet: "} {"Available from Internet: "} if$}
+{ iso.abbreviation {"Available from Internet: "} {"Dispon{\'\i}vel em: "} if$}
 FUNCTION {bbl.void} {""}
 FUNCTION {bbl.volume} { iso.abbreviation {"vol."} {"v."} if$ }
 
 
 MACRO {jan} {"jan."}
-MACRO {feb} {"feb."}
+MACRO {feb} {"fev."}
 MACRO {mar} {"mar."}
 MACRO {apr} {"abr."}
-MACRO {may} {"may"}
+MACRO {may} {"maio"}
 MACRO {jun} {"jun."}
 MACRO {jul} {"jul."}
-MACRO {aug} {"aug."}
-MACRO {sep} {"sep."}
-MACRO {oct} {"oct."}
+MACRO {aug} {"ago."}
+MACRO {sep} {"set."}
+MACRO {oct} {"out."}
 MACRO {nov} {"nov."}
-MACRO {dec} {"dec."}
+MACRO {dec} {"dez."}
 
 
 FUNCTION {is.num}
@@ -1737,6 +1665,7 @@ FUNCTION {book}
   format.publisher.address output
   iso.date.place {abnt.alf 'skip$ {format.year output new.sentence} if$}
                  {format.year output new.sentence} if$
+  format.volume output new.sentence
   format.book.pages output
   format.illustrated
   format.dimensions  new.sentence
@@ -2102,7 +2031,7 @@ FUNCTION {set.default.abnt.variables}
   "$RCSfile: abnt-alf.bst,v $ " extract.cvs.key
   %
   "abnt-alf.bst,v " = 'abnt.alf := % #1 para abnt-alf #0 para abnt-num
-  "$Revision: v-1.9.1 $" extract.cvs.key 'abnt.bst.revision :=
+  "$Revision: v<VERSION> $" extract.cvs.key 'abnt.bst.revision :=
   #0 'abnt.and.type     :=     % #0 "e"; #1 "&"
   "\emph" 'abnt.emphasize :=
   #0 'abnt.cite.style :=       %default norm version for NBR10520
@@ -2221,7 +2150,7 @@ FUNCTION {end.bib}
 EXECUTE {end.bib}
 FUNCTION {apresentacao}
 { "+---------------------------------------------------------+"
-  "| http://abntex2.googlecode.com                           |"
+  "| http://www.abntex.net.br/                               |"
   "| Em caso de dúvidas ou problemas com este estilo procure |"
   abnt.alf
  {"| Estilo bibliográfico abntex2-alf.bst versão " abnt.bst.revision * "          |" *}

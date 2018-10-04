@@ -1,23 +1,23 @@
 \chapter{Methodology}\label{cap:methodology}
 \thispagestyle{empty}
 
-We now present the methodology, schedule, and collaboration of the proposed work. First, we outline the main steps needed to develop the research described in this plan (Section~\ref{sec:steps}). Next, in Section~\ref{sec:schedule}, we detail a proposed schedule for the entire Ph.D. period, composed of actions and their expected duration. Finally, we conclude describing the intended collaboration with one of the leading research groups in the topic of the Ph.D. plan (Section~\ref{sec:collaboration}). 
+We now present the methodology, schedule, and collaboration of the proposed work. First, we outline the incremental steps needed to develop the research described in this plan (Section~\ref{sec:steps}). Next, in Section~\ref{sec:schedule}, we detail a proposed schedule for the entire PhD period, composed of actions and their expected duration. Finally, we conclude describing the collaboration with one of the leading research groups in the topic of the PhD plan (Section~\ref{sec:collaboration}). 
 
 \section{Steps}
 \label{sec:steps}
 
 \begin{enumerate}
-\item {\bf Monitoring and study of state-of-the-art}: we will perform an in-depth state-of-the-art study and monitoring of themes related to the work during all the duration of the Ph.D. Also, in the initial period of the course, we will conduct a detailed examination and reproduction of the main related existing methodologies.
+\item {\bf Geolocation inferences from passive analysis}: in the first step, we plan to perform a passive analysis using already collected data from a few IXPs in the Brazilian system. First, we will design a technique capable of generating geolocation inferences about peering interconnections and network elements using existing control plane data (e.g., BGP). Next, we will obtain and prepare the data to serve as input for the proposed solution. Finally, we will perform an evaluation and validate our results. We expect to submit a paper using the generated results.
 
-\item {\bf Methodology modeling}: in this step, we will develop a systematic methodology using IXPs as vantage points to map and produce geolocation inferences, seeking to answer the proposed research questions. Also at this stage, we will analyze the potential data to be used and design the data collection campaigns and data preparation.
+\item {\bf Geolocation inferences from hybrid approach}: in this phase, we will extend our first methodology by performing active measurements campaigns from inside the IXPs without incurring network overheads. We will remain using few IXPs in the Brazilian system. We pretend to correlate the data obtained from the active measurements with the information from the previous passive approach to increase the accuracy of the resulting geolocation inferences. We will perform an evaluation of the technique and validation of the results of the extended methodology. We expect that the obtained results will generate a publication.
 
-\item {\bf Data collection}: in this phase, we will perform the data collection. At this stage, we will execute active measurements campaigns and collect data already available from different sources. More specifically, we will perform active measurements from inside of the IXP to obtain a preliminary geolocation knowledge about the Internet topology. Next, we will gather already collected information on control and data planes (e.g., BGP) and correlate with the active measurement data previously obtained to increase the accuracy of the generated inferences.
+\item {\bf Extension to larger scenarios}: in the third and last point, we plan to scale and apply our technique using active measurements and passive data analysis to a more significant number of IXPs. We will address potential limitations of the approaches from previous steps and apply optimizations to increase both accuracy and scalability of our methodology. The deployment in more IXPs will improve our visibility of the network topology and allow more rich geolocation inferences. We plan to evaluate the methodology and validate all of our results. We believe that the final technique will present rich results, generating a new publication.
 
-\item {\bf Data preparation}: in this point, the collected data will be preprocessed and prepared, including the combination of data from different sources, to serve as input for the proposed methodology. The collection of control plane information (e.g., BGP) and measurements campaigns tends to generate a significant amount of data. In order to process all data efficiently and without imposing resource and performance overheads to the IXP, we plan to use cloud environments (e.g., Azure) capable of dealing with a massive volume of data.
+%\item {\bf Data preparation}: in this point, the collected data will be preprocessed and prepared, including the combination of data from different sources, to serve as input for the proposed methodology. The collection of control plane information (e.g., BGP) and measurements campaigns tends to generate a significant amount of data. In order to process all data efficiently and without imposing resource and performance overheads to the IXP, we plan to use cloud environments (e.g., Azure) capable of dealing with a massive volume of data.
 
-\item {\bf Methodology evaluation}: in this step, we will use de collected and preprocessed data to evaluate and validate the effectiveness of the developed methodology, identifying its features and limitations.
+%\item {\bf Methodology evaluation}: in this step, we will use the collected and preprocessed data to evaluate and validate the effectiveness of the developed methodology, identifying its features and limitations.
 
-\item {\bf Methodology validation}: the final step of the study, we will validate the obtained results of the proposed methodology. For the validation, we plan to contact network operators and IXPs, use privileged data from inside the IXPs as flow samples, make use of ground-truth datasets and include other sources of information to improve the verification of our results. 
+%\item {\bf Methodology validation}: the final step of the study, we will validate the obtained results of the proposed methodology. For the validation, we plan to contact network operators and IXPs, use privileged data from inside the IXPs as flow samples, make use of ground-truth datasets and include other sources of information to improve the verification of our results. 
 
 %\item {\bf Preliminary modeling}: in this step, we will model a methodology capable of using IXPs as scalable vantage points and improve interconnection mapping to facilities;
 
@@ -36,25 +36,45 @@ We now present the methodology, schedule, and collaboration of the proposed work
 
 \item In-depth state-of-the-art study and monitoring about themes related with thesis; \label{it:estado-da-arte}
 
-\item Development of a systematic methodology using IXPs as vantage points to map and produce geolocation inferences; \label{it:modelagem}
-
 \item Qualification Exam; \label{it:qualif}
 
 \item Examination of proficiency in English; \label{it:english}
 
-\item Examination of proficiency in a foreign language; \label{it:idioma}
+\item Modeling of the first technique based on passive analysis; \label{it:modelagem1}
 
-\item Data collection and preprocessing \label{it:aval-anali}
+\item Access and processing of existing data; \label{it:coleta1}
+
+\item Evaluation of the first proposed technique; \label{it:evaluation1}
+
+\item Validation of the results obtained by the first methodology; \label{it:validation1}
+
+\item Writing and submission of first conference/journal article \label{it:writing1}
+
+\item Modeling of the second technique based on hybrid approach; \label{it:modelagem2}
 
 \item Period reserved for doctorate sandwich; \label{it:sanduba}
 
-\item Evaluation, review and reassessment of the proposed methodology; \label{it:aval-larga-escala}
-
-\item Validation the obtained results of the proposed methodology; \label{it:proj-amb-exp}
+\item Conduction of active measurements and processing of data; \label{it:coleta2}
 
 \item Thesis Proposal Defense; \label{it:def-prop-tese}
 
-\item Improvement of the methodology considering the results obtained in previous activities, also considering contributions and recommendations of the evaluation committee of the thesis proposal; \label{it:rev-final-modelo}
+\item Evaluation of the second proposed technique; \label{it:evaluation2}
+
+\item Validation of the results obtained by the second methodology; \label{it:validation2}
+
+\item Writing and submission of second conference/journal article \label{it:writing2}
+
+\item Examination of proficiency in a foreign language; \label{it:idioma}
+
+\item Extension of the previously developed techniques; \label{it:modelagem3}
+
+\item Conduction of active measurements in more IXPs and processing of data; \label{it:coleta3}
+
+\item Evaluation of the extended methodology proposed technique; \label{it:evaluation3}
+
+\item Validation of the results obtained by the extended methodology; \label{it:validation3}
+
+\item Writing and submission of a third conference/journal article \label{it:writing3}
 
 \item Thesis writing; \label{it:redacao}
 
@@ -62,7 +82,6 @@ We now present the methodology, schedule, and collaboration of the proposed work
 
 \item Participation in conferences and symposia related to the theme of the thesis; \label{it:part-cong}
 
-\item Writing and submitting articles for conferences and periodicals based on the results obtained during the studies and evaluations, related to the theme of this doctoral proposal. \label{it:submissoes}
 \end{enumerate}
 
 \begin{table}[htp]
@@ -98,22 +117,11 @@ We now present the methodology, schedule, and collaboration of the proposed work
 \mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
 \mc{1}{|>{\columncolor[gray]{0.3}}l|}{} \\
 \hline
-% -------- Modelagem inicial
-\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:modelagem}} &
-\mc{1}{|>{\columncolor{tcC}}l|}{ } &
-\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
-\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
-\mc{1}{|>{\columncolor{tcC}}l|}{ } &
-\mc{1}{|>{\columncolor{tcC}}l|}{ } &
-\mc{1}{|>{\columncolor{tcC}}l|}{ } &
-\mc{1}{|>{\columncolor{tcC}}l|}{ } &
-\mc{1}{|>{\columncolor{tcC}}l|}{ } \\
-\hline
 % -------- Exame de Qualificação
 %\rowcolor{tcC}
 \mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:qualif}} &
-\mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
@@ -124,8 +132,19 @@ We now present the methodology, schedule, and collaboration of the proposed work
 % -------- Exame de Proficiência em Ingles
 %\rowcolor{tcC}
 \mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:english}} &
-\mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } \\
+\hline
+% -------- Modelagem inicial
+\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:modelagem1}} &
+\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
@@ -135,9 +154,9 @@ We now present the methodology, schedule, and collaboration of the proposed work
 \hline
 % -------- Exame de Proficiência em Língua Estrangeira
 %\rowcolor{tcC}
-\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:idioma}} &
-\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:coleta1}} &
 \mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
@@ -147,43 +166,41 @@ We now present the methodology, schedule, and collaboration of the proposed work
 \hline
 % -------- Avaliação por métodos analíticos
 %\rowcolor{tcC}
-\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:aval-anali}} &
+\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:evaluation1}} &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
-\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } \\
 \hline
-
-% -------- Afastamento para doutorado sanduíche
+% -------- Projeto de um ambiente de experimentação
 %\rowcolor{tcC}
-\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:sanduba}} &
-\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:validation1}} &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
-\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } \\
 \hline
 % -------- Revisão do Modelo
-%\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:rev-modelo}} &
-%\mc{1}{|>{\columncolor{tcC}}l|}{ } &
-%\mc{1}{|>{\columncolor{tcC}}l|}{ } &
-%\mc{1}{|>{\columncolor{tcC}}l|}{ } &
-%\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
-%\mc{1}{|>{\columncolor{tcC}}l|}{ } &
-%\mc{1}{|>{\columncolor{tcC}}l|}{ } &
-%\mc{1}{|>{\columncolor{tcC}}l|}{ } &
-%\mc{1}{|>{\columncolor{tcC}}l|}{ } \\
-%\hline
-% -------- Projeto de um ambiente de experimentação
-%\rowcolor{tcC}
-\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:aval-larga-escala}} &
+\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:writing1}} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } \\
+\hline
+% -------- Modelagem inicial
+\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:modelagem2}} &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
@@ -193,14 +210,26 @@ We now present the methodology, schedule, and collaboration of the proposed work
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } \\
 \hline
-% -------- Avaliação experimental em larga escala
+% -------- Afastamento para doutorado sanduíche
 %\rowcolor{tcC}
-\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:proj-amb-exp}} &
+\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:sanduba}} &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
 \mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } \\
+\hline
+% -------- Exame de Proficiência em Língua Estrangeira
+%\rowcolor{tcC}
+\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:coleta2}} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } \\
@@ -217,15 +246,108 @@ We now present the methodology, schedule, and collaboration of the proposed work
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } \\
 \hline
-% -------- Aperfeiçoamento do modelo
-\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:rev-final-modelo}} &
+% -------- Avaliação por métodos analíticos
+%\rowcolor{tcC}
+\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:evaluation2}} &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } \\
+\hline
+% -------- Projeto de um ambiente de experimentação
+%\rowcolor{tcC}
+\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:validation2}} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } \\
+\hline
+% -------- Revisão do Modelo
+\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:writing2}} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } \\
+\hline
+% -------- Revisão do Modelo
+\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:idioma}} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } \\
+\hline
+% -------- Modelagem inicial
+\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:modelagem3}} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } \\
+\hline
+% -------- Exame de Proficiência em Língua Estrangeira
+%\rowcolor{tcC}
+\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:coleta3}} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } \\
+\hline
+% -------- Avaliação por métodos analíticos
+%\rowcolor{tcC}
+\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:evaluation3}} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } \\
+\hline
+% -------- Projeto de um ambiente de experimentação
+%\rowcolor{tcC}
+\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:validation3}} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } \\
+\hline
+% -------- Revisão do Modelo
+\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:writing3}} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } \\
 \hline
 %\rowcolor{tcC}
@@ -235,8 +357,8 @@ We now present the methodology, schedule, and collaboration of the proposed work
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } &
-\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
-\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
+\mc{1}{|>{\columncolor{tcC}}l|}{ } &
 \mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
 \mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
 \mc{1}{|>{\columncolor{tcC}}l|}{ } \\
@@ -264,25 +386,15 @@ We now present the methodology, schedule, and collaboration of the proposed work
 \mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
 \mc{1}{|>{\columncolor[gray]{0.3}}l|}{} \\
 \hline
-% -------- Redação Submissão Artigos
-\mc{1}{|>{\columncolor{tcA}}c|}{\ref{it:submissoes}} &
-\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
-\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
-\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
-\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
-\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
-\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
-\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} &
-\mc{1}{|>{\columncolor[gray]{0.3}}l|}{} \\
-\hline
+
 \end{tabular}
 \end{center}
-\caption{Schedule of activities during the Ph.D. period}
+\caption{Schedule of activities during the PhD period}
 \label{tab:planejamento-doutorado}
 \end{table}
 
 \section{Collaboration}
 \label{sec:collaboration}
 
-The proposed Ph.D. is joint work with the University of California San Diego (UCSD) in cooperation with Kimberly Claffy\footnote{\url{http://www.caida.org/~kc/}} and Bradley Huffaker\footnote{\url{http://www.caida.org/~bhuffake/}}. The collaboration aims to expand the existing relationship between both universities and presents the opportunity for a sandwich doctorate. The second year of Ph.D. is expected to be located at CAIDA/UCSD. The funding for the away period is yet to be determined.
+The proposed PhD is joint work with the University of California San Diego (UCSD) in cooperation with Kimberly Claffy\footnote{\url{http://www.caida.org/~kc/}} and Bradley Huffaker\footnote{\url{http://www.caida.org/~bhuffake/}}. The collaboration aims to expand the existing relationship between both universities and presents the opportunity for a sandwich doctorate. The second year of PhD is expected to be located at CAIDA/UCSD. The funding for the away period is yet to be determined.
 
